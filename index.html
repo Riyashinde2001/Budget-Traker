@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class=".container1" style="background-color:rgb(251, 250, 251);">
+      <div class="container">
+        <h1 class="text-center">Budget Tracker Dashboard</h1>
+        <div id="budgetForm" class="mb-5">
+          <h3>Add Income/Expense</h3>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              class="form-control"
+              id="amount"
+              placeholder="Enter amount"
+            />
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" id="category">
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="addTransaction()"
+          >
+            Add Transaction
+          </button>
+        </div>
+        <div id="budgetSummary">
+          <h3>Budget Summary</h3>
+          <div id="incomeTotal">Total Income: $0</div>
+          <div id="expenseTotal">Total Expense: $0</div>
+          <div id="balance">Balance: $0</div>
+        </div>
+        <div id="chartContainer" class="mt-5"></div>
+        <div class="button .text-center">
+          <button
+            type="button"
+            class="btn"
+            id="resetpage"
+          >
+            Reset 
+          </button>
+        </div>
+      </div>
+      
+    </div>  
+      
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script src="budget.js"></script>
+  </body>
+</html>
